@@ -1,6 +1,6 @@
 {
 	"Create new Schema": {
-    "prefix": "new-schema",
+    "prefix": "snips-schema",
     "body": [
         "\"\"\"Schema for ${1:name}\"\"\"",
         "",
@@ -15,7 +15,7 @@
     "description": "Template for creating a schema python file"
     },
     "Create new ORM Schema": {
-        "prefix": "new-orm-schema",
+        "prefix": "snips-orm-schema",
         "body": [
             "\"\"\"ORM Schema for ${1:name}\"\"\"",
             "",
@@ -34,7 +34,7 @@
         "description": "Template for creating a ORM schema python file"
     },
     "Create new Model": {
-        "prefix": "new-model",
+        "prefix": "snips-model",
         "body": [
             "\"\"\"Model for ${1:name}\"\"\"",
             "",
