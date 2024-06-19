@@ -1,0 +1,20 @@
+{
+  "name": "snips",
+  "displayName": "Snips",
+  "description": "Usefull snippets to save some keypresses",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "python",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
+}
