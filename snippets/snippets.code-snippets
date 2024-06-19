@@ -1,0 +1,57 @@
+{
+	"Create new Schema": {
+    "prefix": "new-schema",
+    "body": [
+        "\"\"\"Schema for ${1:name}\"\"\"",
+        "",
+        "from _future_ import annotations",
+        "from pydantic import Field",
+        "from domain.schemas.orm.${2:orm} import ${3:mnemonic}${1:name}Base",
+        "",
+        "class ${3:mnemonic}${1:name}(${3:mnemonic}${1:name}Base):",
+        "       \"\"\"${1:name} schema\"\"\"",
+        "       ${0}"
+    ],
+    "description": "Template for creating a schema python file"
+    },
+    "Create new ORM Schema": {
+        "prefix": "new-orm-schema",
+        "body": [
+            "\"\"\"ORM Schema for ${1:name}\"\"\"",
+            "",
+            "from uuid import UUID",
+            "from typing_extensions import Self",
+            "from pydantic import model_validator, Field",
+            "from ...generic import TableSchema",
+            "",
+            "class ${2:mnemonic}${1:name}Lite(TableSchema):",
+            "       \"\"\"${1:name}Lite schema\"\"\"",
+            "       ${0}",
+            "",
+            "class ${2:mnemonic}${1:name}Base(${2:mnemonic}${1:name}Lite):",
+            "       \"\"\"${1:name}Base schema\"\"\"",
+        ],
+        "description": "Template for creating a ORM schema python file"
+    },
+    "Create new Model": {
+        "prefix": "new-model",
+        "body": [
+            "\"\"\"Model for ${1:name}\"\"\"",
+            "",
+            "from _future_ import annotations",
+            "from uuid import uuid4",
+            "from sqlalchemy import Column",
+            "from sqlalchemy.dialects.postgresql import UUID",
+            "from sqlalchemy.orm import relationship",
+            "from ..generic import GenericBase, ALL_DELETE",
+            "",
+            "class ${2:mnemonic}${1:name}(GenericBase):",
+            "       \"\"\"${1:name} model\"\"\"",
+            "",
+            "       _tablename_ = '${3:table}'",
+            "       id=Column('${4:id_table}',UUID(as_uuid=True), primary_key=True, default=uuid4)",
+            "       ${0}",
+        ],
+        "description": "Template for creating a model python file"
+    }
+}
