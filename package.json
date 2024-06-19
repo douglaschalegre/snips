@@ -9,6 +9,17 @@
   "categories": [
     "Snippets"
   ],
+  "publisher": "douglaschalegre",
+  "icon": "icon.png",
+  "author": {
+    "name": "Douglas Chalegre",
+    "email": "douglas.chalegre@gmail.com",
+    "url": "https://github.com/douglaschalegre"
+  },
+  "repository": {
+    "url": "https://github.com/douglaschalegre/snips",
+    "type": "git"
+  },
   "contributes": {
     "snippets": [
       {
